@@ -1,0 +1,23 @@
+{
+	"name": "BrickPlayer Game Launcher",
+	"version": "1.5",
+	"description": "Allows you to launch Brick-Hill games in BrickPlayer",
+	"icons": {
+		"16": "icon16.png",
+		"19": "icon19.png",
+		"38": "icon38.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"permissions": [
+		"*://*.brick-hill.com/"
+	],
+	"content_scripts": [{
+		"matches": ["*://*.brick-hill.com/play/*/"],
+		"js": ["content.js"]
+	}],
+	"browser_action": {
+		"default_title": "BrickPlayer Browser Extension"
+	},
+	"manifest_version": 2
+}
